@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 1px solid rgb(255, 0, 0);
+}
+
+:root {
+    --background-color: #f9fafb;
+    --white: whitesmoke;
+}
+
+body {
+    background-color: var(--matcha);
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    display: flex;
+    height: 100vh;
+}
+
+.left-column {
+    background-image: url(dillon-kydd-unsplash-house.jpg);  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    flex: 2 1 0;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-around;
+}
+
+.logo {
+    background-color: black;
+    min-height: 200px;
+    opacity: 50%;
+}
+
+.left-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 64px;
+}
+
+.top,
+.bottom {
+    background-color: var(--background-color);
+    flex: 1 1 0;
+}
+
+.middle {
+    flex: 1.5 1 0;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    justify-content: center;
+}
+
+.text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 128px 0 64px;
+    width: 80%;
+}
+
+.text.two {
+    font-style: italic;
+}
