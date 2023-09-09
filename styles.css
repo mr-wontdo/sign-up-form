@@ -86,20 +86,6 @@ form {
     font-style: italic;
 }
 
-
-
-
-
-
-
-
-
-
-/* Form */
-
-
-
-
 .content {
     display: flex;
     flex-direction: column;
@@ -143,18 +129,15 @@ input {
     padding: 16px 8px;
 }
 
+input.submitted:invalid {
+    border: 1px solid red;  
+}
+
 input:focus {
     border: 1px solid var(--quaternary-color);
     box-shadow: 3px 3px 6px lightgray;
     outline: none;
 }
-
-input:invalid {
-    /* border: 1px solid red; */
-}
-
-
-
 
 input:required + span {
     position: relative;
@@ -171,14 +154,6 @@ input:required + span::after {
     top: -59px;
     left: 235px;
 }
-
-
-
-
-
-
-
-
 
 button {
     margin: 48px 0 0 64px;
