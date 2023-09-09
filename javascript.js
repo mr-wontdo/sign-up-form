@@ -6,12 +6,16 @@ const passwordSpan = document.querySelector('span.password');
 submitButton.addEventListener('click', () => {
     requiredInputs.forEach(input => input.className = 'submitted');
     if (passwordFields[0].value !== passwordFields[1].value) {
-        passwordSpan.classList.add('validation');
+        passwordSpan.classList.add('error');
         passwordFields.forEach(field => {
-            field.className = 'validation';
+            field.className = 'error';
             field.setCustomValidity(' ');
         });
     } else {
-        passwordSpan.classList.remove('validation');
+        passwordSpan.classList.remove('error');
+        passwordFields.forEach(field => {
+            field.classList.remove('error')
+            field.setCustomValidity('');
+        });
     }
 });
