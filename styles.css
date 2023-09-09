@@ -10,8 +10,7 @@
     --secondary-color: #82675e;
     --tertiary-color: #74a3ee;
     --quaternary-color: #2873ec;
-
-
+    --validation-color: #c80000;
 }
 
 body {
@@ -129,11 +128,18 @@ input {
     padding: 16px 8px;
 }
 
+input:hover {
+    background-color: var(--main-color);
+    border: 1px solid black;
+    box-shadow: 3px 3px 6px lightgray;
+}
+
 input.submitted:invalid {
-    border: 1px solid red;  
+    border: 1px solid var(--validation-color);  
 }
 
 input:focus {
+    background-color: var(--main-color);
     border: 1px solid var(--quaternary-color);
     box-shadow: 3px 3px 6px lightgray;
     outline: none;
@@ -153,6 +159,17 @@ input:required + span::after {
     position: absolute;
     top: -59px;
     left: 235px;
+}
+
+input[type="password"].validation {
+    border: 1px solid var(--validation-color);  
+}
+
+input ~ span.password.validation::after {
+    color: var(--validation-color);
+    content: "* Passwords do not match";
+    font-size: 0.75rem;
+    position: absolute;
 }
 
 button {
