@@ -1,3 +1,8 @@
+@font-face {
+    font-family: norse-bold;
+    src: url(fonts/Norse-Bold.otf);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -21,7 +26,7 @@ body {
 }
 
 .left-column {
-    background-image: url(dillon-kydd-unsplash-house.jpg);  
+    background-image: url(images/dillon-kydd-unsplash-house.jpg);  
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -30,18 +35,45 @@ body {
     flex: 1 1 0;
 }
 
-.logo-container {
+.banner-container {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     justify-content: space-around;
 }
 
-.logo {
-    background-color: black;
-    min-height: 200px;
-    opacity: 50%;
+.banner {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+    padding: 12px;
 }
+
+.banner > img {
+    height: auto;
+    width: 125px;
+    opacity: 100%;
+}
+
+.banner > div {
+    color: white;
+    font-family: norse-bold;
+    font-size: 7rem;
+    opacity: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .left-footer {
     display: flex;

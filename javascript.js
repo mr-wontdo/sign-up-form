@@ -9,6 +9,7 @@ submitButton.addEventListener('click', () => {
         passwordSpan.classList.add('validation');
         passwordFields.forEach(field => {
             field.className = 'validation';
+            field.setCustomValidity(' ');
         });
     } else {
         passwordSpan.classList.remove('validation');
