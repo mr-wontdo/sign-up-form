@@ -8,11 +8,15 @@
 :root {
     --main-color: #f9fafb;
     --secondary-color: #82675e;
+    --tertiary-color: #74a3ee;
+    --quaternary-color: #2873ec;
+
+
 }
 
 body {
     background-color: var(--main-color);
-    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: 'Roboto', sans-serif;
     display: flex;
     height: 100vh;
 }
@@ -50,7 +54,7 @@ body {
 form {
     display: flex;
     flex-direction: column;
-    flex: 2 1 0;
+    flex: 1.5 1 0;
 }
 
 .header,
@@ -61,7 +65,7 @@ form {
 .content {
     background-color: white;
     box-shadow: 6px 3px 10px lightgray;
-    flex: 1.5 1 0;
+    flex: 1 1 0;
 }
 
 .header {
@@ -75,7 +79,7 @@ form {
     font-size: 1.5rem;
     font-weight: bold;
     margin-left: 64px;
-    width: clamp(500px, 80%, 1000px);
+    width: clamp(500px, 80%, 800px);
 }
 
 .text.two {
@@ -84,17 +88,104 @@ form {
 
 
 
-/* Insert middle CSS here */
 
 
 
 
 
 
-button,
+
+/* Form */
+
+
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: center;
+}
+
+.content > .text {
+    color: #3f3f3f;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-left: 64px;
+}
+
+.form-row {
+    display: flex;
+    gap: 100px;
+}
+
+.form-row > div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+label {
+    color: #3f3f3f;
+}
+
+input {
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    height: 32px;
+    width: 300px;
+    padding: 16px 8px;
+}
+
+input:focus {
+    border: 1px solid var(--quaternary-color);
+    box-shadow: 3px 3px 6px lightgray;
+    outline: none;
+}
+
+input:invalid {
+    /* border: 1px solid red; */
+}
+
+
+
+
+input:required + span {
+    position: relative;
+}
+
+input:required + span::after {
+    background-color: var(--tertiary-color);
+    border-radius: 4px;
+    color: white;
+    content: "required";
+    font-size: 0.75rem;
+    padding: 3px 6px;
+    position: absolute;
+    top: -59px;
+    left: 235px;
+}
+
+
+
+
+
+
+
+
+
+button {
+    margin: 48px 0 0 64px;
+}
+
 .login {
     margin: 32px 0 0 64px;
-    min-width: max-content;
 }
 
 button {
@@ -116,11 +207,11 @@ button:hover {
 
 a:link,
 a:visited {
-    color: #74a3ee;
+    color: var(--tertiary-color);
     font-weight: bold;
     text-decoration: none;
 }
 
 a:hover {
-    color: #2873ec;
+    color: var(--quaternary-color)
 }

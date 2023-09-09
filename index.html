@@ -4,6 +4,10 @@
         <meta charset="UTF-8">
         <title>Sign-Up Form</title>
         <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <script src="javascript.js" defer="defer"></script>
     </head>
     <body>
         <div class="left-column">
@@ -12,13 +16,50 @@
             </div>
             <div class="left-footer">Photo by&nbsp<u>Dillon Kydd</u>&nbspon&nbsp<u>Unsplash</u></div>
         </div>
-        <form action="" method="post">
+        <form action="" method="get">
             <div class="header">
                 <div class="text one">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo numquam dolorem, ducimus nostrum eius obcaecati perferendis perspiciatis illum, voluptatum explicabo aliquam dolore voluptatem itaque, voluptates mollitia esse ad exercitationem adipisci!</div>
-                <div class="text two">Lorem ipsum, dolor sit amet.</div>
+                <div class="text two">Welcome to the smoothest loan application you will ever experience.</div>
             </div>
             <div class="content">
-                
+                <div class="text">Let's get you signed up!</div>
+                <div class="form-container">
+                    <div class="form-row">
+                        <div>
+                            <label for="first_name">FIRST NAME</label>
+                            <input type="text" id="first_name" name="first_name" required>
+                            <span></span>
+                        </div>
+                        <div>
+                            <label for="last_name">LAST NAME</label>
+                            <input type="text" id="last_name" name="last_name" required>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div>
+                            <label for="user_email">EMAIL</label>
+                            <input type="email" id="user_email" name="user_email" required>
+                            <span></span>
+                        </div>
+                        <div>
+                            <label for="phone_number">PHONE NUMBER</label>
+                            <input type="tel" id="phone_number" name="phone_number">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div>
+                            <label for="user_password">PASSWORD</label>
+                            <input type="password" id="user_password" name="user_password" required>
+                            <span></span>
+                        </div>
+                        <div>
+                            <label for="confirm_user_password">CONFIRM PASSWORD</label>
+                            <input type="password" id="confirm_user_password" name="confirm_user_password" required>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="submission">
                 <button type="submit">Create Account</button>
