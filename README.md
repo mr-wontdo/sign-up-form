@@ -1,2 +1,2 @@
 # sign-up-form
-A project that utilizes HTML forms to create a sign-up form.
+A sign-up form created using HTML, CSS, and JavaScript.
